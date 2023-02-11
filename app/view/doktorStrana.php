@@ -8,25 +8,57 @@ $osoba = $_SESSION['logovanaOsoba'];
 ?>
 
 
-<h1>Dobrodosao, doktore <?php  echo $osoba->getPrezime(); ?> </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Doktor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
 
-<form action="" method="post">
-    <input type="submit" value="Prikazi sve pacijente" id="Prikazi sve pacijente" name="PrikaziSvePacijente">
-</form>
+<div class="container-fluid p-5 bg-dark text-white text-center">
+  <h1><?php echo Kontroler::$ordinacija; ?></h1>
+  <h2>Doktore <?php  echo $osoba->getPrezime(); ?> , dobrodosao u korisnicki servis!</h2>
+  <form action="" method="post">
+    <input type="submit" class="btn btn-light" value="Odjavi se" id="Odjavise" name="Odjavise">
+</form>  
+</div>
+  
+<div class="container mt-5">
+  <div class="row">
 
-<form action="" method="post">
-    <input type="submit" value="Prikazi preglede" id="Prikazi preglede" name="PrikaziPreglede">
-</form>
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Prikazi sve pacijente" id="Prikazi sve pacijente" name="PrikaziSvePacijente">
+    </form>
+    </div>
 
-<form action="" method="post">
-    <input type="submit" value="Prikazi recepte" id="Prikazi recepte" name="PrikaziRecepte">
-</form>
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Prikazi preglede" id="Prikazi preglede" name="PrikaziPreglede">
+    </form>
+    </div>
 
-<form action="" method="post">
-    <input type="submit" value="Odjavi se" id="Odjavise" name="Odjavise">
-</form>
-<p style="background-color: aqua; width: 10%;"><?php echo Kontroler::$builtBy; ?></p>
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Prikazi recepte" id="Prikazi recepte" name="PrikaziRecepte">
+    </form>  
+    </div>
 
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Dodaj recept" id="Dodajrecept" name="Dodajrecept">
+    </form>   
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
 
 
 <?php

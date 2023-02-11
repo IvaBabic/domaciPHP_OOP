@@ -5,23 +5,70 @@ include "../../loadData.php";
 $nizOsoba = $_SESSION["users"];
 ?>
 
-<h1>Dobrodosao, administratore</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Administrator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
 
-<form action="" method="post">
-    <input type="submit" value="Prikazi sve doktore" id="Prikazi sve doktore" name="PrikaziSveDoktore">
-</form>
+<div class="container-fluid p-5 bg-dark text-white text-center">
+  <h1><?php echo Kontroler::$ordinacija; ?></h1>
+  <h2>Administratore, dobrodosao u korisnicki servis!</h2>
+  <form action="" method="post">
+    <input type="submit" class="btn btn-light" value="Odjavi se" id="Odjavise" name="Odjavise">
+</form>  
+</div>
+  
+<div class="container mt-5">
+  <div class="row">
 
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Prikazi sve doktore" id="Prikazi sve doktore" name="PrikaziSveDoktore">
+    </form>
+    </div>
 
-<form action="" method="post">
-    <input type="submit" value="Prikazi sve pacijente" id="Prikazi sve pacijente" name="PrikaziSvePacijente">
-</form>
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Prikazi sve pacijente" id="Prikazi sve pacijente" name="PrikaziSvePacijente">
+    </form>
+    </div>
 
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Dodaj doktora" id="Dodajdoktora" name="Dodajdoktora">
+    </form>   
+    </div>
 
-<form action="" method="post">
-    <input type="submit" value="Odjavi se" id="Odjavise" name="Odjavise">
-</form>
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Dodaj pacijenta" id="Dodajpacijenta" name="Dodajpacijenta">
+    </form>   
+    </div>
 
-<p style="background-color: aqua; width: 10%;"><?php echo Kontroler::$builtBy; ?></p>
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Obrisi doktora" id="Obrisidoktora" name="Obrisidoktora">
+    </form>   
+    </div>
+
+    <div class="col">
+    <form action="" method="post">
+    <input type="submit" class="btn btn-info" value="Obrisi pacijenta" id="Obrisipacijenta" name="Obrisipacijenta">
+    </form>   
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
+
 
 
 <?php

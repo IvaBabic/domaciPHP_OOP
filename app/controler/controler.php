@@ -1,7 +1,7 @@
 <?php
 class Kontroler
 {
-    public static $builtBy = "built by Ivana Babic";
+    public static $ordinacija = "Alfa ordinacija";
     public static function prikaziPodatke($objekat)
     {
         $noviObjekat = $objekat->napraviNiz();
